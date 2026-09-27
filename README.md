@@ -1,17 +1,13 @@
 <!-- ═══════════════════════════════ HEADER ═══════════════════════════════ -->
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f2027,50:203a43,100:2c5364&height=200&section=header&text=Olitha%20Induvara&fontSize=52&fontColor=ffffff&fontAlignY=36&desc=Electrical%20%26%20Electronic%20Engineering%20Undergraduate%20%C2%B7%20University%20of%20Peradeniya&descSize=16&descAlignY=58&animation=fadeIn" width="100%" alt="Olitha Induvara"/>
+<img src="assets/header.png" width="100%" alt="Olitha Induvara, Electrical and Electronic Engineering Undergraduate, University of Peradeniya"/>
 
-<a href="https://github.com/olithainduvara">
-  <img src="https://readme-typing-svg.demolab.com?font=Inter&weight=600&size=20&duration=3200&pause=900&color=4A9EFF&center=true&vCenter=true&width=620&lines=Embedded+Systems+%C2%B7+IoT+%C2%B7+LoRa+Telemetry;Flood+Early-Warning+%26+Hydrological+Modelling;Desktop+Tools+for+Real-Time+Signal+Acquisition;Drones%2C+RC+Aircraft+%26+Aerial+Cinematography" alt="Typing SVG"/>
-</a>
+<br/><br/>
 
-<br/>
-
-[![Portfolio](https://img.shields.io/badge/Portfolio-Visit-4A9EFF?style=for-the-badge&logo=googlechrome&logoColor=white)](https://olithainduvara.github.io/OlithaInduvara_Portfolio/)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/olitha-induvara-16329733b/)
-[![Email](https://img.shields.io/badge/Email-Contact-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:olithainduvara@gmail.com)
+[![Portfolio](https://img.shields.io/badge/Portfolio-olithainduvara.github.io-4A9EFF?style=for-the-badge&logo=googlechrome&logoColor=white)](https://olithainduvara.github.io/OlithaInduvara_Portfolio/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Olitha_Induvara-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/olitha-induvara-16329733b/)
+[![Email](https://img.shields.io/badge/Email-olithainduvara@gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:olithainduvara@gmail.com)
 
 </div>
 
@@ -19,13 +15,31 @@
 
 ## 👋 About Me
 
-I'm a third-year **Electrical & Electronic Engineering** undergraduate at the **University of Peradeniya, Sri Lanka**. I build systems end to end — soldering the sensor node, writing the firmware, designing the radio link, and shipping the desktop, web or mobile software that turns the data into decisions.
+<table>
+<tr>
+<td width="32%" valign="top" align="center">
+<img src="assets/about-photo.png" width="100%" alt="Olitha Induvara at EngEx 2025"/>
+</td>
+<td width="68%" valign="top">
 
-- 🌊 &nbsp;Building **FloodLink**, a LoRa-based flood early-warning system for the Mahaweli River — *2nd Place, Idea to Invention 2025*
-- ✈️ &nbsp;Developing **FlyMe**, an ESP32 + LoRa telemetry link and Android ground station for an RC aircraft
-- 🧠 &nbsp;Modelling river levels with classical ML and neural networks, and being honest about what small datasets can support
-- 🎥 &nbsp;Media Lead for **EngEx 2025**, DJI drone pilot, photographer and astronomy enthusiast
-- 🤝 &nbsp;Member of **IEEE PES** & **IEEE MTT-S** student branches · Former President, Buddhist Society (Faculty of Engineering)
+I'm a third-year **Electrical & Electronic Engineering** undergraduate at the **University of Peradeniya, Sri Lanka**.
+
+I build systems **end to end**: I solder the sensor node, write the firmware, design the radio link, and ship the desktop, web or mobile software that turns the data into decisions.
+
+<br/>
+
+| | |
+|:--|:--|
+| 🌊 **Now building** | **FloodLink**, a LoRa flood early-warning system for the Mahaweli River |
+| ✈️ **Also building** | **FlyMe**, ESP32 LoRa telemetry and an Android ground station for an RC aircraft |
+| 🧠 **Exploring** | River-level forecasting with classical ML and neural networks |
+| 🏆 **Recognition** | 2nd Place, *Idea to Invention 2025* |
+| 🎥 **Beyond code** | EngEx 2025 Media Lead · DJI drone pilot · photographer · astronomy enthusiast |
+| 🤝 **Community** | IEEE PES & IEEE MTT-S · Former President, Buddhist Society (FoE) |
+
+</td>
+</tr>
+</table>
 
 ---
 
@@ -231,8 +245,8 @@ flowchart LR
 
 <div align="center">
 
-<img height="165" src="https://github-readme-stats.vercel.app/api?username=olithainduvara&show_icons=true&include_all_commits=true&count_private=true&hide_border=true&theme=tokyonight" alt="GitHub stats"/>
-<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=olithainduvara&layout=compact&langs_count=8&hide_border=true&theme=tokyonight" alt="Top languages"/>
+<img height="170" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=olithainduvara&theme=tokyonight" alt="GitHub stats"/>
+<img height="170" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=olithainduvara&theme=tokyonight" alt="Repos per language"/>
 
 <img src="https://streak-stats.demolab.com?user=olithainduvara&hide_border=true&theme=tokyonight" alt="GitHub streak" width="60%"/>
 
@@ -242,16 +256,14 @@ flowchart LR
 
 <div align="center">
 
-### 📫 Let's Connect
+<img src="assets/footer.png" width="100%" alt="Let's build something that matters"/>
 
-Open to **internships**, **research collaborations** and **embedded/IoT projects**.
+<br/><br/>
 
 [![Portfolio](https://img.shields.io/badge/-Portfolio-4A9EFF?style=flat-square&logo=googlechrome&logoColor=white)](https://olithainduvara.github.io/OlithaInduvara_Portfolio/)
 [![LinkedIn](https://img.shields.io/badge/-LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/olitha-induvara-16329733b/)
 [![Gmail](https://img.shields.io/badge/-olithainduvara@gmail.com-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:olithainduvara@gmail.com)
 
 <img src="https://komarev.com/ghpvc/?username=olithainduvara&style=flat-square&color=4A9EFF&label=Profile+views" alt="Profile views"/>
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:2c5364,50:203a43,100:0f2027&height=110&section=footer" width="100%"/>
 
 </div>
