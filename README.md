@@ -70,6 +70,68 @@ PySide6 desktop apps packaged as standalone `.exe`s, zero-dependency web dashboa
 
 ---
 
+## 🛠️ Tech Stack
+
+<div align="center">
+
+**Languages**
+
+<img src="https://skillicons.dev/icons?i=python,cpp,c,java,js,html,css&theme=dark" alt="Languages"/>
+
+**Hardware & Embedded**
+
+<img src="https://skillicons.dev/icons?i=arduino,raspberrypi&theme=dark" alt="Hardware"/>
+
+![ESP32](https://img.shields.io/badge/ESP32-E7352C?style=for-the-badge&logo=espressif&logoColor=white)
+![STM32](https://img.shields.io/badge/STM32-03234B?style=for-the-badge&logo=stmicroelectronics&logoColor=white)
+![PlatformIO](https://img.shields.io/badge/PlatformIO-F5822A?style=for-the-badge&logo=platformio&logoColor=white)
+![LoRa](https://img.shields.io/badge/LoRa-1E88E5?style=for-the-badge)
+![NI DAQ](https://img.shields.io/badge/NI--DAQmx-FFD100?style=for-the-badge)
+
+**Data, ML & Apps**
+
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
+![pandas](https://img.shields.io/badge/pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white)
+![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
+![Qt](https://img.shields.io/badge/PySide6-41CD52?style=for-the-badge&logo=qt&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
+![Plotly](https://img.shields.io/badge/Plotly-3F4F75?style=for-the-badge&logo=plotly&logoColor=white)
+![Android](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)
+
+**Tools**
+
+<img src="https://skillicons.dev/icons?i=git,github,vscode,androidstudio,windows&theme=dark" alt="Tools"/>
+
+</div>
+
+---
+
+## 🏆 Highlights
+
+| | |
+|:--|:--|
+| 🥈 | **2nd Place, Idea to Invention 2025** with FloodLink |
+| 🎬 | **Media Lead, EngEx 2025**, Sri Lanka's largest engineering exhibition |
+| 🔭 | **International Asteroid Search Campaign**, citizen-science asteroid hunting |
+| 🎤 | Invited speaker on *AI, Technology & Future Robotics* for the Lions Club of Puttalam |
+| 🚁 | Aerial cinematography for the university's **first-ever drone show** |
+
+---
+
+## 📈 GitHub Stats
+
+<div align="center">
+
+<img height="170" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=olithainduvara&theme=tokyonight" alt="GitHub stats"/>
+<img height="170" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=olithainduvara&theme=tokyonight" alt="Repos per language"/>
+
+<img src="https://streak-stats.demolab.com?user=olithainduvara&hide_border=true&theme=tokyonight" alt="GitHub streak" width="60%"/>
+
+</div>
+
+---
+
 ## 🚀 Featured Projects
 
 > Projects marked 🔒 are in private repositories. This page gives an overview of each one.
@@ -189,68 +251,6 @@ flowchart LR
 - Dual-motor PWM speed and direction control through an H-bridge driver.
 - Built with PlatformIO (Arduino framework), plus STM32Cube HAL projects for low-level peripheral work.
 - *In progress:* wall sensing and maze-solving algorithms.
-
----
-
-## 🛠️ Tech Stack
-
-<div align="center">
-
-**Languages**
-
-<img src="https://skillicons.dev/icons?i=python,cpp,c,java,js,html,css&theme=dark" alt="Languages"/>
-
-**Hardware & Embedded**
-
-<img src="https://skillicons.dev/icons?i=arduino,raspberrypi&theme=dark" alt="Hardware"/>
-
-![ESP32](https://img.shields.io/badge/ESP32-E7352C?style=for-the-badge&logo=espressif&logoColor=white)
-![STM32](https://img.shields.io/badge/STM32-03234B?style=for-the-badge&logo=stmicroelectronics&logoColor=white)
-![PlatformIO](https://img.shields.io/badge/PlatformIO-F5822A?style=for-the-badge&logo=platformio&logoColor=white)
-![LoRa](https://img.shields.io/badge/LoRa-1E88E5?style=for-the-badge)
-![NI DAQ](https://img.shields.io/badge/NI--DAQmx-FFD100?style=for-the-badge)
-
-**Data, ML & Apps**
-
-![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
-![pandas](https://img.shields.io/badge/pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
-![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white)
-![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
-![Qt](https://img.shields.io/badge/PySide6-41CD52?style=for-the-badge&logo=qt&logoColor=white)
-![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
-![Plotly](https://img.shields.io/badge/Plotly-3F4F75?style=for-the-badge&logo=plotly&logoColor=white)
-![Android](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)
-
-**Tools**
-
-<img src="https://skillicons.dev/icons?i=git,github,vscode,androidstudio,windows&theme=dark" alt="Tools"/>
-
-</div>
-
----
-
-## 🏆 Highlights
-
-| | |
-|:--|:--|
-| 🥈 | **2nd Place, Idea to Invention 2025** with FloodLink |
-| 🎬 | **Media Lead, EngEx 2025**, Sri Lanka's largest engineering exhibition |
-| 🔭 | **International Asteroid Search Campaign**, citizen-science asteroid hunting |
-| 🎤 | Invited speaker on *AI, Technology & Future Robotics* for the Lions Club of Puttalam |
-| 🚁 | Aerial cinematography for the university's **first-ever drone show** |
-
----
-
-## 📈 GitHub Stats
-
-<div align="center">
-
-<img height="170" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=olithainduvara&theme=tokyonight" alt="GitHub stats"/>
-<img height="170" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=olithainduvara&theme=tokyonight" alt="Repos per language"/>
-
-<img src="https://streak-stats.demolab.com?user=olithainduvara&hide_border=true&theme=tokyonight" alt="GitHub streak" width="60%"/>
-
-</div>
 
 ---
 
