@@ -625,6 +625,119 @@ def footer():
     print(f"footer.svg  {len(svg) // 1024} KB")
 
 
+# ───────────────────────────── about-me card ─────────────────────────────
+ICONS = {
+    "wave": '<path d="M-11 -4 q2.75 -4 5.5 0 t5.5 0 t5.5 0 t5.5 0 M-11 4 q2.75 -4 5.5 0 t5.5 0 t5.5 0 t5.5 0"/>',
+    "plane": '<path d="M0 -11 L2.5 -3 L11 1 V3.5 L2.5 1.5 L1.5 7 L4.5 9.5 V11 L0 10 L-4.5 11 V9.5 L-1.5 7 L-2.5 1.5 L-11 3.5 V1 L-2.5 -3 Z" fill="currentColor" stroke="none"/>',
+    "spark": '<path d="M-10 8 L-4 -1 L1 4 L10 -8"/><circle cx="10" cy="-8" r="2" fill="currentColor"/>',
+    "trophy": '<path d="M-6 -9 H6 V-3 a6 6 0 0 1 -12 0 Z M-6 -6 H-10 a3.5 3.5 0 0 0 4 5 M6 -6 H10 a3.5 3.5 0 0 1 -4 5 M0 3 V7 M-5 9 H5"/>',
+    "camera": '<rect x="-10" y="-6" width="20" height="14" rx="3"/><circle cx="0" cy="1" r="4"/><path d="M-4 -6 L-2 -9 H2 L4 -6"/>',
+    "people": '<circle cx="-4" cy="-4" r="3.5"/><circle cx="6" cy="-3" r="2.8"/><path d="M-11 9 a7 7 0 0 1 14 0 M4 9 a5.5 5.5 0 0 1 8 -5"/>',
+}
+
+ABOUT_TILES = [
+    ("wave", "#22d3ee", "NOW BUILDING", "FloodLink", "Flood early warning · Mahaweli River"),
+    ("plane", "#a78bfa", "ALSO BUILDING", "FlyMe", "RC aircraft telemetry & ground station"),
+    ("spark", "#4a9eff", "EXPLORING", "River-level forecasting", "Classical ML & neural networks"),
+    ("trophy", "#fbbf24", "RECOGNITION", "2nd Place", "Idea to Invention 2025"),
+    ("camera", "#fb7185", "BEYOND CODE", "EngEx 2025 Media Lead", "Drone pilot · photographer · astronomy"),
+    ("people", "#34d399", "COMMUNITY", "IEEE PES & IEEE MTT-S", "Former President, Buddhist Society (FoE)"),
+]
+
+
+def about():
+    w, h = 1280, 470
+    ph = Image.open(os.path.join(PHOTOS, "engex.jpg")).convert("RGB").crop((330, 280, 1030, 1213)).resize((480, 640), Image.LANCZOS)
+    PX, PY, PW, PHH = 52, 36, 300, 400
+    TX, TY, TW, TH, GX, GY = 392, 222, 270, 98, 14, 14
+    tile_svg = []
+    for k, (ic, col, lab, main, sub) in enumerate(ABOUT_TILES):
+        x = TX + (k % 3) * (TW + GX)
+        y = TY + (k // 3) * (TH + GY)
+        sub_size = 13 if text_w(sub, 13) < TW - 32 else 12
+        tile_svg.append(
+            f'<g class="tile" style="animation-delay:{0.5 + k * 0.12:.2f}s">'
+            f'<rect x="{x}" y="{y}" width="{TW}" height="{TH}" rx="16" fill="#131c2e" stroke="{col}" stroke-opacity="0.32"/>'
+            f'<rect x="{x}" y="{y + 18}" width="3" height="{TH - 36}" rx="1.5" fill="{col}"/>'
+            f'<circle cx="{x + 34}" cy="{y + 32}" r="17" fill="{col}" fill-opacity="0.13"/>'
+            f'<circle cx="{x + 34}" cy="{y + 32}" r="17" fill="none" stroke="{col}" stroke-opacity="0.6" class="ring-pulse" style="animation-delay:{k * 0.5:.1f}s"/>'
+            f'<g transform="translate({x + 34} {y + 32})" fill="none" stroke="{col}" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" color="{col}">{ICONS[ic]}</g>'
+            f'<text x="{x + 62}" y="{y + 28}" class="sans" font-size="11" font-weight="700" letter-spacing="1.6" fill="{col}">{lab}</text>'
+            f'<text x="{x + 62}" y="{y + 47}" class="sans" font-size="16" font-weight="700" fill="#f1f5f9">{html.escape(main)}</text>'
+            f'<text x="{x + 18}" y="{y + 78}" class="sans" font-size="{sub_size}" fill="#94a3b8">{html.escape(sub)}</text></g>')
+    cxp, cyp = PX + PW / 2, PY + PHH / 2
+    pill = "Open to internships &amp; collaborations"
+    pill_w = text_w("Open to internships & collaborations", 14) + 46
+    aria = ("About me. Third-year Electrical and Electronic Engineering undergraduate at the University of Peradeniya, Sri Lanka, "
+            "building systems end to end. Now building FloodLink, a flood early-warning system for the Mahaweli River. "
+            "Also building FlyMe, RC aircraft telemetry and a ground station. Exploring river-level forecasting with classical ML "
+            "and neural networks. 2nd Place, Idea to Invention 2025. EngEx 2025 Media Lead, drone pilot, photographer and astronomy "
+            "enthusiast. IEEE PES and IEEE MTT-S member, former President of the Buddhist Society (FoE).")
+    svg = f'''<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 {w} {h}" width="{w}" height="{h}" role="img" aria-label="{aria}">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0b111d"/><stop offset="1" stop-color="#0f1726"/></linearGradient>
+    <pattern id="dots" width="28" height="28" patternUnits="userSpaceOnUse"><circle cx="14" cy="14" r="1" fill="#fff" fill-opacity="0.08"/></pattern>
+    <radialGradient id="b1"><stop offset="0" stop-color="#22d3ee" stop-opacity="0.18"/><stop offset="1" stop-color="#22d3ee" stop-opacity="0"/></radialGradient>
+    <radialGradient id="b2"><stop offset="0" stop-color="#a78bfa" stop-opacity="0.18"/><stop offset="1" stop-color="#a78bfa" stop-opacity="0"/></radialGradient>
+    <linearGradient id="frame" gradientUnits="userSpaceOnUse" x1="{PX}" y1="{PY}" x2="{PX + PW}" y2="{PY + PHH}">
+      <stop offset="0" stop-color="#22d3ee"/><stop offset="0.5" stop-color="#4a9eff"/><stop offset="1" stop-color="#a78bfa"/>
+      <animateTransform attributeName="gradientTransform" type="rotate" values="0 {cxp} {cyp};360 {cxp} {cyp}" dur="10s" repeatCount="indefinite"/>
+    </linearGradient>
+    <linearGradient id="shade" x1="0" y1="0" x2="0" y2="1"><stop offset="0.6" stop-color="#080c16" stop-opacity="0"/><stop offset="1" stop-color="#080c16" stop-opacity="0.9"/></linearGradient>
+    <linearGradient id="bar" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#22d3ee"/><stop offset="0.5" stop-color="#4a9eff"/><stop offset="1" stop-color="#a78bfa"/></linearGradient>
+    <linearGradient id="shine" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset="0.5" stop-color="#fff" stop-opacity="0.85"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+    <linearGradient id="title" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#f1f5f9"/><stop offset="1" stop-color="#bfe9ff"/></linearGradient>
+    <clipPath id="photoClip"><rect x="{PX}" y="{PY}" width="{PW}" height="{PHH}" rx="22"/></clipPath>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="10"/></filter>
+    <style>{BASE_CSS}{HF_CSS}
+      .tile{{animation:fadeIn .9s ease-out both}}
+      .ring-pulse{{animation:pulse 3s ease-in-out infinite}}
+      .h1{{animation:fadeIn 1s ease-out .1s both}}
+      .p1{{animation:fadeIn 1s ease-out .25s both}}
+      .photo-shine{{animation:pshine 6s ease-in-out infinite}}
+      @keyframes pshine{{0%,70%{{transform:translateX(-200px)}}100%{{transform:translateX(520px)}}}}
+      .bar-shine{{animation:shimmer 5s ease-in-out infinite}}
+    </style>
+  </defs>
+  <rect width="{w}" height="{h}" fill="url(#bg)"/>
+  <rect width="{w}" height="{h}" fill="url(#dots)"/>
+  <ellipse cx="200" cy="240" rx="320" ry="300" fill="url(#b1)" class="blob1"/>
+  <ellipse cx="1150" cy="200" rx="360" ry="300" fill="url(#b2)" class="blob2"/>
+
+  <rect x="{PX - 4}" y="{PY - 4}" width="{PW + 8}" height="{PHH + 8}" rx="25" fill="none" stroke="url(#frame)" stroke-width="8" filter="url(#soft)" opacity="0.6"/>
+  <g clip-path="url(#photoClip)">
+    <image x="{PX}" y="{PY}" width="{PW}" height="{PHH}" preserveAspectRatio="xMidYMid slice" xlink:href="data:image/jpeg;base64,{jpeg_b64(ph, 84)}"/>
+    <rect x="{PX}" y="{PY}" width="{PW}" height="{PHH}" fill="url(#shade)"/>
+    <g class="photo-shine"><rect x="{PX}" y="{PY}" width="70" height="{PHH}" fill="url(#shine)" opacity="0.18" transform="skewX(-12)"/></g>
+  </g>
+  <rect x="{PX - 3}" y="{PY - 3}" width="{PW + 6}" height="{PHH + 6}" rx="24" fill="none" stroke="url(#frame)" stroke-width="3"/>
+  <text x="{PX + 22}" y="{PY + PHH - 44}" class="sans" font-size="21" font-weight="700" fill="#f1f5f9">EngEx 2025</text>
+  <text x="{PX + 22}" y="{PY + PHH - 21}" class="sans" font-size="15" fill="#22d3ee">Media Team Lead</text>
+
+  <g class="h1">
+    <rect x="{w - 48 - pill_w:.0f}" y="44" width="{pill_w:.0f}" height="30" rx="15" fill="#34d399" fill-opacity="0.1" stroke="#34d399" stroke-opacity="0.55"/>
+    <circle cx="{w - 48 - pill_w + 18:.0f}" cy="59" r="7" fill="#34d399" opacity="0.3" class="ring-pulse"/>
+    <circle cx="{w - 48 - pill_w + 18:.0f}" cy="59" r="4" fill="#34d399"/>
+    <text x="{w - 48 - pill_w + 32:.0f}" y="64" class="sans" font-size="14" font-weight="600" fill="#d1fae5">{pill}</text>
+  </g>
+  <text x="{TX}" y="62" class="sans h1" font-size="14" font-weight="700" letter-spacing="3.5" fill="#22d3ee">ABOUT ME</text>
+  <text x="{TX - 2}" y="104" class="sans h1" font-size="34" font-weight="700" fill="url(#title)">I build systems end to end.</text>
+  <g class="p1 sans" font-size="17.5" fill="#cbd5e1">
+    <text x="{TX}" y="142">Third-year <tspan font-weight="700" fill="#f1f5f9">Electrical &amp; Electronic Engineering</tspan> undergraduate at the</text>
+    <text x="{TX}" y="166"><tspan font-weight="700" fill="#f1f5f9">University of Peradeniya</tspan>, Sri Lanka. From sensor hardware and firmware to</text>
+    <text x="{TX}" y="190">radio links and the software that turns data into decisions.</text>
+  </g>
+  {''.join(tile_svg)}
+
+  <rect x="0" y="{h - 4}" width="{w}" height="4" fill="url(#bar)"/>
+  <rect x="0" y="{h - 4}" width="260" height="4" fill="url(#shine)" class="bar-shine" opacity="0.7"/>
+</svg>
+'''
+    with open(os.path.join(OUT, "about.svg"), "w", encoding="utf-8") as f:
+        f.write(svg)
+    print(f"about.svg  {len(svg) // 1024} KB")
+
+
 if __name__ == "__main__":
-    header(); footer()
+    header(); footer(); about()
     emg(); flood_web(); hydrosync(); floodlink(); water_level(); flyme_hw(); flyme_app(); micromouse(); sobel(); dji()

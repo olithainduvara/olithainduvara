@@ -15,120 +15,7 @@
 
 ## 👋 About Me
 
-<table>
-<tr>
-<td width="32%" valign="top" align="center">
-<img src="assets/about-photo.png" width="100%" alt="Olitha Induvara at EngEx 2025"/>
-</td>
-<td width="68%" valign="top">
-
-I'm a third-year **Electrical & Electronic Engineering** undergraduate at the **University of Peradeniya, Sri Lanka**.
-
-I build systems **end to end**: I solder the sensor node, write the firmware, design the radio link, and ship the desktop, web or mobile software that turns the data into decisions.
-
-<br/>
-
-| | |
-|:--|:--|
-| 🌊 **Now building** | **FloodLink**, a LoRa flood early-warning system for the Mahaweli River |
-| ✈️ **Also building** | **FlyMe**, ESP32 LoRa telemetry and an Android ground station for an RC aircraft |
-| 🧠 **Exploring** | River-level forecasting with classical ML and neural networks |
-| 🏆 **Recognition** | 2nd Place, *Idea to Invention 2025* |
-| 🎥 **Beyond code** | EngEx 2025 Media Lead · DJI drone pilot · photographer · astronomy enthusiast |
-| 🤝 **Community** | IEEE PES & IEEE MTT-S · Former President, Buddhist Society (FoE) |
-
-</td>
-</tr>
-</table>
-
----
-
-## 🧭 What I Work On
-
-<table>
-<tr>
-<td width="33%" valign="top">
-
-### 🔌 Embedded & IoT
-ESP32-C3 and STM32 firmware, LoRa (SX1278) radio links, IMU sensor fusion, GPS, ultrasonic level sensing, custom binary packet protocols and hand-built hardware.
-
-</td>
-<td width="33%" valign="top">
-
-### 📊 Data & Modelling
-Time-series cleaning and merging, lead-lag analysis, regression, tree ensembles, MLPs and LSTMs, with leak-free cross-validation for hydrological forecasting.
-
-</td>
-<td width="33%" valign="top">
-
-### 🖥️ Apps & Dashboards
-PySide6 desktop apps packaged as standalone `.exe`s, zero-dependency web dashboards, and an Android ground station over Wi-Fi/UDP and USB-OTG.
-
-</td>
-</tr>
-</table>
-
----
-
-## 🛠️ Tech Stack
-
-<div align="center">
-
-**Languages**
-
-<img src="https://skillicons.dev/icons?i=python,cpp,c,java,js,html,css&theme=dark" alt="Languages"/>
-
-**Hardware & Embedded**
-
-<img src="https://skillicons.dev/icons?i=arduino,raspberrypi&theme=dark" alt="Hardware"/>
-
-![ESP32](https://img.shields.io/badge/ESP32-E7352C?style=for-the-badge&logo=espressif&logoColor=white)
-![STM32](https://img.shields.io/badge/STM32-03234B?style=for-the-badge&logo=stmicroelectronics&logoColor=white)
-![PlatformIO](https://img.shields.io/badge/PlatformIO-F5822A?style=for-the-badge&logo=platformio&logoColor=white)
-![LoRa](https://img.shields.io/badge/LoRa-1E88E5?style=for-the-badge)
-![NI DAQ](https://img.shields.io/badge/NI--DAQmx-FFD100?style=for-the-badge)
-
-**Data, ML & Apps**
-
-![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
-![pandas](https://img.shields.io/badge/pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
-![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white)
-![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
-![Qt](https://img.shields.io/badge/PySide6-41CD52?style=for-the-badge&logo=qt&logoColor=white)
-![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
-![Plotly](https://img.shields.io/badge/Plotly-3F4F75?style=for-the-badge&logo=plotly&logoColor=white)
-![Android](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)
-
-**Tools**
-
-<img src="https://skillicons.dev/icons?i=git,github,vscode,androidstudio,windows&theme=dark" alt="Tools"/>
-
-</div>
-
----
-
-## 🏆 Highlights
-
-| | |
-|:--|:--|
-| 🥈 | **2nd Place, Idea to Invention 2025** with FloodLink |
-| 🎬 | **Media Lead, EngEx 2025**, Sri Lanka's largest engineering exhibition |
-| 🔭 | **International Asteroid Search Campaign**, citizen-science asteroid hunting |
-| 🎤 | Invited speaker on *AI, Technology & Future Robotics* for the Lions Club of Puttalam |
-| 🚁 | Aerial cinematography for the university's **first-ever drone show** |
-
----
-
-## 📈 GitHub Stats
-
-<div align="center">
-
-<img height="170" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=olithainduvara&theme=tokyonight" alt="GitHub stats"/>
-<img height="170" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=olithainduvara&theme=tokyonight" alt="Repos per language"/>
-
-<img src="https://streak-stats.demolab.com?user=olithainduvara&hide_border=true&theme=tokyonight" alt="GitHub streak" width="60%"/>
-
-</div>
+<img src="assets/animated/about.svg" width="100%" alt="About me: third-year Electrical and Electronic Engineering undergraduate at the University of Peradeniya, Sri Lanka, building systems end to end. Now building FloodLink, a flood early-warning system for the Mahaweli River. Also building FlyMe, RC aircraft telemetry and a ground station. Exploring river-level forecasting with classical ML and neural networks. 2nd Place, Idea to Invention 2025. EngEx 2025 Media Lead, drone pilot, photographer and astronomy enthusiast. IEEE PES and IEEE MTT-S member, former President of the Buddhist Society (FoE). Open to internships and collaborations."/>
 
 ---
 
@@ -242,6 +129,95 @@ flowchart LR
 <img src="assets/animated/micromouse.svg" width="100%" alt="MicroMouse"/>
 
 **🔒 MicroMouse**: an autonomous robot that explores and solves a maze on its own. *In progress.*
+
+---
+
+## 🧭 What I Work On
+
+<table>
+<tr>
+<td width="33%" valign="top">
+
+### 🔌 Embedded & IoT
+ESP32-C3 and STM32 firmware, LoRa (SX1278) radio links, IMU sensor fusion, GPS, ultrasonic level sensing, custom binary packet protocols and hand-built hardware.
+
+</td>
+<td width="33%" valign="top">
+
+### 📊 Data & Modelling
+Time-series cleaning and merging, lead-lag analysis, regression, tree ensembles, MLPs and LSTMs, with leak-free cross-validation for hydrological forecasting.
+
+</td>
+<td width="33%" valign="top">
+
+### 🖥️ Apps & Dashboards
+PySide6 desktop apps packaged as standalone `.exe`s, zero-dependency web dashboards, and an Android ground station over Wi-Fi/UDP and USB-OTG.
+
+</td>
+</tr>
+</table>
+
+---
+
+## 🛠️ Tech Stack
+
+<div align="center">
+
+**Languages**
+
+<img src="https://skillicons.dev/icons?i=python,cpp,c,java,js,html,css&theme=dark" alt="Languages"/>
+
+**Hardware & Embedded**
+
+<img src="https://skillicons.dev/icons?i=arduino,raspberrypi&theme=dark" alt="Hardware"/>
+
+![ESP32](https://img.shields.io/badge/ESP32-E7352C?style=for-the-badge&logo=espressif&logoColor=white)
+![STM32](https://img.shields.io/badge/STM32-03234B?style=for-the-badge&logo=stmicroelectronics&logoColor=white)
+![PlatformIO](https://img.shields.io/badge/PlatformIO-F5822A?style=for-the-badge&logo=platformio&logoColor=white)
+![LoRa](https://img.shields.io/badge/LoRa-1E88E5?style=for-the-badge)
+![NI DAQ](https://img.shields.io/badge/NI--DAQmx-FFD100?style=for-the-badge)
+
+**Data, ML & Apps**
+
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
+![pandas](https://img.shields.io/badge/pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white)
+![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
+![Qt](https://img.shields.io/badge/PySide6-41CD52?style=for-the-badge&logo=qt&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
+![Plotly](https://img.shields.io/badge/Plotly-3F4F75?style=for-the-badge&logo=plotly&logoColor=white)
+![Android](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)
+
+**Tools**
+
+<img src="https://skillicons.dev/icons?i=git,github,vscode,androidstudio,windows&theme=dark" alt="Tools"/>
+
+</div>
+
+---
+
+## 🏆 Highlights
+
+| | |
+|:--|:--|
+| 🥈 | **2nd Place, Idea to Invention 2025** with FloodLink |
+| 🎬 | **Media Lead, EngEx 2025**, Sri Lanka's largest engineering exhibition |
+| 🔭 | **International Asteroid Search Campaign**, citizen-science asteroid hunting |
+| 🎤 | Invited speaker on *AI, Technology & Future Robotics* for the Lions Club of Puttalam |
+| 🚁 | Aerial cinematography for the university's **first-ever drone show** |
+
+---
+
+## 📈 GitHub Stats
+
+<div align="center">
+
+<img height="170" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=olithainduvara&theme=tokyonight" alt="GitHub stats"/>
+<img height="170" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=olithainduvara&theme=tokyonight" alt="Repos per language"/>
+
+<img src="https://streak-stats.demolab.com?user=olithainduvara&hide_border=true&theme=tokyonight" alt="GitHub streak" width="60%"/>
+
+</div>
 
 ---
 
