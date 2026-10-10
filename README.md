@@ -1,7 +1,7 @@
 <!-- ═══════════════════════════════ HEADER ═══════════════════════════════ -->
 <div align="center">
 
-<img src="assets/header.png" width="100%" alt="Olitha Induvara, Electrical and Electronic Engineering Undergraduate, University of Peradeniya"/>
+<img src="assets/animated/header.svg" width="100%" alt="Olitha Induvara, Electrical and Electronic Engineering Undergraduate, University of Peradeniya"/>
 
 <br/><br/>
 
@@ -134,7 +134,7 @@ PySide6 desktop apps packaged as standalone `.exe`s, zero-dependency web dashboa
 
 ## 🚀 Featured Projects
 
-> Projects marked 🔒 are in private repositories. This page gives an overview of each one.
+> 🔒 **Private projects** are shown with a short overview only. Happy to talk about them: [get in touch](mailto:olithainduvara@gmail.com).
 
 ### 🌊 FloodLink: Flood Early-Warning Ecosystem
 
@@ -142,28 +142,22 @@ Several projects that together cover the full pipeline from river sensor to comm
 
 ```mermaid
 flowchart LR
-    A["📡 Sensor node<br/>ESP32-C3 · JSN-SR04T"] -->|LoRa 433 MHz| B["📶 Gateway"]
-    B -->|UDP JSON| C["🖥️ FloodLink dashboard<br/>ETA prediction"]
-    C --> D["🔔 Telegram / WhatsApp alerts"]
-    E["🛰️ ArcGIS gauge feed"] --> F["🌐 Web Monitor"]
-    E --> G["🔄 HydroSync Studio<br/>dataset builder"]
-    G --> H["🧠 Water-level models<br/>1–6 h forecasts"]
+    A["📡 River sensors"] --> B["🖥️ FloodLink<br/>early warning"]
+    B --> C["🔔 Community alerts"]
+    D["🛰️ Public gauge data"] --> E["🌐 Flood Web Monitor"]
+    D --> F["🔄 HydroSync Studio"]
+    F --> G["🧠 Water-level forecasting"]
 ```
 
-<!-- ─────────────── FloodLink 1.0 ─────────────── -->
-<img src="assets/banners/floodlink.png" width="100%" alt="FloodLink 1.0"/>
+<!-- ─────────────── FloodLink 1.0 (private) ─────────────── -->
+<img src="assets/animated/floodlink.svg" width="100%" alt="FloodLink 1.0"/>
 
-**🔒 FloodLink 1.0**: a low-cost flood early-warning prototype, and the project that won **2nd Place at Idea to Invention 2025**.
-
-- Hand-soldered **ESP32-C3 + JSN-SR04T** ultrasonic sensor nodes send river levels over **SX1278 LoRa** to a central gateway.
-- A live dashboard receives UDP telemetry and fits a regression model to estimate **when each flood threshold (Alert, Minor, Major) will be crossed**.
-- A local NDJSON event bus feeds **Telegram** and **WhatsApp (Twilio)** dispatchers that send alerts to the community.
-- A Streamlit simulation dashboard is included for demos and testing.
+**🔒 FloodLink 1.0**: a low-cost flood early-warning system for riverside communities, and the project that won **2nd Place at Idea to Invention 2025**.
 
 <br/>
 
-<!-- ─────────────── Flood Web Monitor ─────────────── -->
-<a href="https://olithainduvara.github.io/Peradeniya-And-Nawalapitiya-Water-Level-and-Rainfall_WebMonitor-Mahaweli-River-/"><img src="assets/banners/flood-web-monitor.png" width="100%" alt="Flood Web Monitor"/></a>
+<!-- ─────────────── Flood Web Monitor (public) ─────────────── -->
+<a href="https://olithainduvara.github.io/Peradeniya-And-Nawalapitiya-Water-Level-and-Rainfall_WebMonitor-Mahaweli-River-/"><img src="assets/animated/flood-web-monitor.svg" width="100%" alt="Flood Web Monitor"/></a>
 
 **Flood Web Monitor**: a real-time water-level and rainfall dashboard for the Peradeniya and Nawalapitiya gauges.
 
@@ -177,60 +171,47 @@ flowchart LR
 
 <br/>
 
-<!-- ─────────────── HydroSync Studio ─────────────── -->
-<img src="assets/banners/hydrosync.png" width="100%" alt="HydroSync Studio"/>
+<!-- ─────────────── HydroSync Studio (public) ─────────────── -->
+<a href="https://github.com/olithainduvara/HydroSync-1.0"><img src="assets/animated/hydrosync.svg" width="100%" alt="HydroSync Studio"/></a>
 
-**🔒 HydroSync Studio** (FloodLink 2.0): a desktop app that turns messy, overlapping gauge downloads into one clean training dataset.
+**HydroSync Studio** (FloodLink 2.0): a desktop app that turns messy, overlapping gauge downloads into one clean training dataset.
 
 - Merges rolling **72-hour exports** into a single row per hour per station. On the current data it removed **481 duplicate readings**.
 - Handles **three timestamp formats**, one of them in UTC (verified against 68 overlapping hours), and converts them all to Sri Lanka time.
 - Detects recording gaps so that no rows are invented across them, and fills only short dropouts.
 - Has a **PySide6** interface with dark and light themes, drag-and-drop import and a headless CLI, and ships as a standalone **Windows .exe**.
 
+[![Repo](https://img.shields.io/badge/Source-GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/olithainduvara/HydroSync-1.0)
+
 <br/>
 
-<!-- ─────────────── Water Level Forecasting ─────────────── -->
-<img src="assets/banners/water-level-model.png" width="100%" alt="Water Level Forecasting"/>
+<!-- ─────────────── Water Level Forecasting (private) ─────────────── -->
+<img src="assets/animated/water-level-model.svg" width="100%" alt="Water Level Forecasting"/>
 
-**🔒 Peradeniya Water Level Forecasting**: forecasts the Peradeniya gauge from the upstream Nawalapitiya gauge and rainfall at both stations.
-
-- Lead-lag analysis shows that Nawalapitiya **leads Peradeniya by 3–4 hours**, and that delay is what makes forecasting possible.
-- Compares **9 models** (Ridge, Random Forest, Extra Trees, Gradient Boosting, SVR, MLP, LSTM and baselines) at **0, 1, 3 and 6 h lead times**.
-- Uses leave-one-part-out cross-validation, so no feature is ever computed across the 39-day gap in the data.
-- **Best result: 0.14 m RMSE with NSE 0.99 at 1 hour ahead**, a 45% improvement over the persistence baseline.
+**🔒 Peradeniya Water Level Forecasting**: predicts the river level at Peradeniya hours ahead, using the gauge further upstream.
 
 <br/>
 
 ### ✈️ FlyMe: RC Aircraft Telemetry & Ground Station
 
-<!-- ─────────────── FlyMe Hardware ─────────────── -->
-<img src="assets/banners/flyme-hardware.png" width="100%" alt="FlyMe Hardware"/>
+<!-- ─────────────── FlyMe Hardware (private) ─────────────── -->
+<img src="assets/animated/flyme-hardware.svg" width="100%" alt="FlyMe Hardware"/>
 
-**🔒 FlyMe Hardware**: ESP32-C3 firmware for the aircraft and its ground receiver.
-
-- **200 Hz Mahony attitude estimation** on an MPU6500 IMU, plus NEO-M8N GPS for position and ground speed.
-- A packed **47-byte telemetry frame sent 10 times per second** over LoRa (433 MHz, SF7), transmitted asynchronously so the 200 Hz filter never blocks.
-- An acknowledged command uplink carries ground commands such as sensor calibration. Each command is repeated until the aircraft echoes its ID.
-- The ground receiver bridges LoRa to **USB serial, Wi-Fi UDP and HTTP** using a documented JSON link protocol.
+**🔒 FlyMe Hardware**: the flight telemetry hardware and firmware for an RC aircraft and its ground receiver.
 
 <br/>
 
-<!-- ─────────────── FlyMe App ─────────────── -->
-<img src="assets/banners/flyme-app.png" width="100%" alt="FlyMe Ground Station"/>
+<!-- ─────────────── FlyMe App (private) ─────────────── -->
+<img src="assets/animated/flyme-app.svg" width="100%" alt="FlyMe Ground Station"/>
 
-**🔒 FlyMe Ground Station**: an Android app for tracking the aircraft live.
-
-- Shows the aircraft on satellite, dark or street maps, with distance from home, altitude, speed, heading, range rings and a return-to-home arrow.
-- A full-screen HUD shows link and LoRa signal, satellites, battery and a flight timer.
-- **Voice and vibration alerts** for signal loss, GPS fix loss, maximum distance, low altitude and low battery.
-- Records flights automatically, with replay and **GPX export**. Connects over Wi-Fi (UDP/HTTP) or a **USB-OTG** cable, and has a built-in demo flight.
+**🔒 FlyMe Ground Station**: an Android app that tracks the aircraft live on a map, with alerts and flight replay.
 
 <br/>
 
 ### 🔬 More Engineering Projects
 
-<!-- ─────────────── EMG Recorder ─────────────── -->
-<a href="https://github.com/olithainduvara/EMG-Data-Recorder-Via-NiDAQ-card"><img src="assets/banners/emg-recorder.png" width="100%" alt="EMG Recorder"/></a>
+<!-- ─────────────── EMG Recorder (public) ─────────────── -->
+<a href="https://github.com/olithainduvara/EMG-Data-Recorder-Via-NiDAQ-card"><img src="assets/animated/emg-recorder.svg" width="100%" alt="EMG Recorder"/></a>
 
 **EMG Recorder**: a desktop tool for recording muscle signals through the NI USB-6009 data acquisition card.
 
@@ -243,20 +224,30 @@ flowchart LR
 
 <br/>
 
-<!-- ─────────────── MicroMouse ─────────────── -->
-<img src="assets/banners/micromouse.png" width="100%" alt="MicroMouse"/>
+<!-- ─────────────── Sobel Filter on FPGA (private) ─────────────── -->
+<img src="assets/animated/sobel-fpga.svg" width="100%" alt="Sobel Filter on FPGA"/>
 
-**🔒 MicroMouse**: an autonomous maze-solving robot built on the **STM32F411 BlackPill**.
+**🔒 Sobel Filter on FPGA**: real-time image edge detection built in digital hardware and shown live on a monitor.
 
-- Dual-motor PWM speed and direction control through an H-bridge driver.
-- Built with PlatformIO (Arduino framework), plus STM32Cube HAL projects for low-level peripheral work.
-- *In progress:* wall sensing and maze-solving algorithms.
+<br/>
+
+<!-- ─────────────── Drone Video Bridge (private) ─────────────── -->
+<img src="assets/animated/dji-video-bridge.svg" width="100%" alt="Drone Video Bridge"/>
+
+**🔒 Drone Video Bridge**: sends a drone's live camera view to an HDMI screen for broadcasting, while the pilot keeps flying as normal.
+
+<br/>
+
+<!-- ─────────────── MicroMouse (private) ─────────────── -->
+<img src="assets/animated/micromouse.svg" width="100%" alt="MicroMouse"/>
+
+**🔒 MicroMouse**: an autonomous robot that explores and solves a maze on its own. *In progress.*
 
 ---
 
 <div align="center">
 
-<img src="assets/footer.png" width="100%" alt="Let's build something that matters"/>
+<img src="assets/animated/footer.svg" width="100%" alt="Let's build something that matters"/>
 
 <br/><br/>
 
